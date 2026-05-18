@@ -56,6 +56,21 @@
     "goRegister": "Sign up",
     "goLogin": "Sign in"
   },
+  "forgotPassword": {
+    "linkText": "Forgot password?",
+    "title": "Reset your password",
+    "subtitle": "Enter your email address and we will give you a reset code.",
+    "emailStepButton": "Get reset code",
+    "codeTitle": "Set a new password",
+    "codeSubtitle": "Confirm the reset code below and choose a new password.",
+    "codeIssued": "Your reset code is",
+    "codeNote": "This code expires in {{minutes}} minutes.",
+    "codeLabel": "Reset code",
+    "newPassword": "New password",
+    "resetButton": "Reset password",
+    "submitting": "Please wait…",
+    "backToLogin": "Back to sign in"
+  },
   "generator": {
     "title": "Design your tattoo",
     "subtitle": "Four quick steps to your AI-generated sketch.",

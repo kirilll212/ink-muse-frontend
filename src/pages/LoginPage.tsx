@@ -64,6 +64,15 @@ export function LoginPage() {
           required
         />
 
+        <div className="text-right">
+          <Link
+            to="/forgot-password"
+            className="text-sm font-medium text-brand-600 hover:underline dark:text-brand-400"
+          >
+            {t('forgotPassword.linkText')}
+          </Link>
+        </div>
+
         <button
           type="submit"
           disabled={submitting}

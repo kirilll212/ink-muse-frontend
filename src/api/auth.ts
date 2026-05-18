@@ -23,6 +23,21 @@ export const authApi = {
     await apiClient.post('/auth/logout')
   },
 
+  async forgotPassword(
+    email: string
+  ): Promise<{ email: string; code: string; expiresInMinutes: number }> {
+    const { data } = await apiClient.post('/auth/forgot-password', { email })
+    return data
+  },
+
+  async resetPassword(input: {
+    email: string
+    code: string
+    password: string
+  }): Promise<void> {
+    await apiClient.post('/auth/reset-password', input)
+  },
+
   async me(): Promise<User> {
     const { data } = await apiClient.get<{ user: User }>('/auth/me')
     return data.user
