@@ -1,0 +1,174 @@
+{
+  "common": {
+    "appName": "InkMuse",
+    "tagline": "AI Tattoo Sketch Generator",
+    "loading": "Loading…"
+  },
+  "nav": {
+    "home": "Home",
+    "generate": "Generate",
+    "history": "My Gallery",
+    "login": "Sign in",
+    "register": "Sign up",
+    "logout": "Sign out"
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "uk": "Українська"
+  },
+  "home": {
+    "badge": "Powered by AI",
+    "title": "Turn your idea into a tattoo sketch",
+    "subtitle": "Describe what you imagine, pick a body part and a style — our AI draws a unique sketch for you in seconds.",
+    "ctaPrimary": "Start creating",
+    "ctaSecondary": "Open my gallery",
+    "step1Title": "Pick a body part",
+    "step1Text": "Choose where the tattoo will live, from forearm to ribs.",
+    "step2Title": "Choose a style",
+    "step2Text": "Line art, geometric, blackwork, watercolor and more.",
+    "step3Title": "Describe your idea",
+    "step3Text": "Write a short prompt and let the AI sketch it for you."
+  },
+  "auth": {
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Sign in to generate and save your tattoo sketches.",
+    "registerTitle": "Create your account",
+    "registerSubtitle": "Join InkMuse and start designing tattoos with AI.",
+    "fullName": "Full name",
+    "fullNamePlaceholder": "Jane Doe",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "••••••••",
+    "passwordHint": "At least 8 characters.",
+    "signIn": "Sign in",
+    "signUp": "Create account",
+    "submitting": "Please wait…",
+    "noAccount": "Don’t have an account?",
+    "haveAccount": "Already have an account?",
+    "goRegister": "Sign up",
+    "goLogin": "Sign in"
+  },
+  "generator": {
+    "title": "Design your tattoo",
+    "subtitle": "Four quick steps to your AI-generated sketch.",
+    "bodyPartStep": "Body part",
+    "styleStep": "Style",
+    "sizeStep": "Size",
+    "describeStep": "Describe your tattoo",
+    "descriptionPlaceholder": "e.g. A minimalist wolf howling at a crescent moon, surrounded by tiny pine trees and stars",
+    "descriptionHint": "{{count}} / {{max}} characters",
+    "descriptionTooShort": "Please write at least {{min}} characters.",
+    "suggest": "Suggest with AI",
+    "suggesting": "Thinking…",
+    "suggestHint": "Need inspiration? Let the AI suggest a description from your selections.",
+    "suggestNeedsSelection": "Pick a body part, style and size first.",
+    "generate": "Generate sketch",
+    "generating": "Generating your sketch…",
+    "generatingHint": "This can take up to a minute — the AI is drawing.",
+    "resultTitle": "Your tattoo sketch",
+    "resultMeta": "{{style}} · {{bodyPart}} · {{size}}",
+    "download": "Download",
+    "regenerate": "Generate another",
+    "incomplete": "Please pick a body part, style and size first.",
+    "placeholderTitle": "Your sketch will appear here",
+    "placeholderText": "Complete the steps on the left and hit Generate."
+  },
+  "history": {
+    "title": "My Gallery",
+    "subtitle": "Every tattoo sketch you have generated.",
+    "empty": "No sketches yet",
+    "emptyText": "Generate your first tattoo sketch and it will show up here.",
+    "emptyCta": "Create a sketch",
+    "download": "Download",
+    "delete": "Delete",
+    "confirmDelete": "Delete this sketch? This cannot be undone.",
+    "viewHint": "View details"
+  },
+  "detail": {
+    "title": "Sketch details",
+    "description": "Description",
+    "style": "Style",
+    "bodyPart": "Body part",
+    "tattooSize": "Tattoo size",
+    "imageSize": "Image size",
+    "seed": "Seed",
+    "created": "Created",
+    "download": "Download image",
+    "close": "Close"
+  },
+  "edit": {
+    "title": "Edit your sketch",
+    "subtitle": "Tweak the description and the AI will redraw it.",
+    "descriptionLabel": "Updated description",
+    "apply": "Apply changes",
+    "applying": "Redrawing…",
+    "done": "Done",
+    "open": "Edit"
+  },
+  "bodyParts": {
+    "arm": "Arm",
+    "forearm": "Forearm",
+    "shoulder": "Shoulder",
+    "chest": "Chest",
+    "back": "Back",
+    "leg": "Leg",
+    "calf": "Calf",
+    "ankle": "Ankle",
+    "wrist": "Wrist",
+    "hand": "Hand",
+    "neck": "Neck",
+    "ribs": "Ribs"
+  },
+  "styles": {
+    "line-art": "Line art",
+    "minimalist": "Minimalist",
+    "geometric": "Geometric",
+    "traditional": "Traditional",
+    "neo-traditional": "Neo-traditional",
+    "realistic": "Realistic",
+    "blackwork": "Blackwork",
+    "dotwork": "Dotwork",
+    "tribal": "Tribal",
+    "watercolor": "Watercolor",
+    "japanese": "Japanese",
+    "new-school": "New school",
+    "sketch": "Sketch",
+    "ornamental": "Ornamental",
+    "surrealism": "Surrealism",
+    "engraving": "Engraving",
+    "biomechanical": "Biomechanical",
+    "trash-polka": "Trash polka"
+  },
+  "size": {
+    "widthLabel": "Width",
+    "heightLabel": "Height",
+    "hint": "Real size of the tattoo on your body, in centimetres."
+  },
+  "sizePresets": {
+    "tiny": "Tiny",
+    "small": "Small",
+    "medium": "Medium",
+    "large": "Large"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Cannot reach the server. Make sure the backend is running.",
+    "sessionExpired": "Your session has expired. Please sign in again."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you are looking for does not exist.",
+    "cta": "Back to home"
+  },
+  "footer": {
+    "builtWith": "Built with React, AdonisJS and free AI image generation."
+  }
+}

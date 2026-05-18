@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers config for the InkMuse web app.
+  // This is a static-assets Worker: it serves the Vite build output (./dist)
+  // and falls back to index.html so client-side routing works.
+  "name": "inkmuse-web",
+  "compatibility_date": "2026-05-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
