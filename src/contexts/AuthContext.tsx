@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 import { authApi } from '../api/auth'
 import { TOKEN_STORAGE_KEY } from '../api/client'
-import type { AuthResponse, User } from '../types'
+import type { AuthResponse, RegisterInput, User } from '../types'
 
 /** Authentication lifecycle status. */
 type AuthStatus = 'loading' | 'authenticated' | 'unauthenticated'
@@ -10,7 +10,9 @@ interface AuthContextValue {
   user: User | null
   status: AuthStatus
   login: (email: string, password: string) => Promise<void>
-  register: (input: { fullName: string; email: string; password: string }) => Promise<void>
+  register: (input: RegisterInput) => Promise<void>
+  /** Replace the cached user (e.g. after a profile edit). */
+  updateUser: (user: User) => void
   logout: () => Promise<void>
 }
 
@@ -56,7 +58,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     persistSession(await authApi.login({ email, password }))
   }
 
-  const register = async (input: { fullName: string; email: string; password: string }) => {
+  const register = async (input: RegisterInput) => {
     persistSession(await authApi.register(input))
   }
 
@@ -72,7 +74,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <AuthContext.Provider value={{ user, status, login, register, logout }}>
+    <AuthContext.Provider
+      value={{ user, status, login, register, updateUser: setUser, logout }}
+    >
       {children}
     </AuthContext.Provider>
   )

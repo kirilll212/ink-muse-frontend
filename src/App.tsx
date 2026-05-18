@@ -7,6 +7,7 @@ import { RegisterPage } from './pages/RegisterPage'
 import { ForgotPasswordPage } from './pages/ForgotPasswordPage'
 import { GeneratorPage } from './pages/GeneratorPage'
 import { HistoryPage } from './pages/HistoryPage'
+import { ProfilePage } from './pages/ProfilePage'
 import { NotFoundPage } from './pages/NotFoundPage'
 
 /**
@@ -24,6 +25,7 @@ export default function App() {
         <Route element={<ProtectedRoute />}>
           <Route path="generate" element={<GeneratorPage />} />
           <Route path="history" element={<HistoryPage />} />
+          <Route path="profile" element={<ProfilePage />} />
         </Route>
 
         <Route path="*" element={<NotFoundPage />} />

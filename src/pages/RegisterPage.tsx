@@ -15,7 +15,9 @@ export function RegisterPage() {
   const { register, status } = useAuth()
   const navigate = useNavigate()
 
-  const [fullName, setFullName] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
@@ -30,7 +32,13 @@ export function RegisterPage() {
     setError(null)
     setSubmitting(true)
     try {
-      await register({ fullName, email, password })
+      await register({
+        firstName: firstName.trim(),
+        lastName: lastName.trim(),
+        username: username.trim(),
+        email: email.trim(),
+        password,
+      })
       navigate('/generate')
     } catch (err) {
       setError(getApiErrorMessage(err) ?? t('errors.network'))
@@ -44,13 +52,34 @@ export function RegisterPage() {
       <form onSubmit={handleSubmit} className="space-y-4" noValidate>
         {error && <FormError message={error} />}
 
+        <div className="grid grid-cols-2 gap-3">
+          <TextField
+            id="firstName"
+            label={t('auth.firstName')}
+            placeholder={t('auth.firstNamePlaceholder')}
+            value={firstName}
+            onChange={setFirstName}
+            autoComplete="given-name"
+            required
+          />
+          <TextField
+            id="lastName"
+            label={t('auth.lastName')}
+            placeholder={t('auth.lastNamePlaceholder')}
+            value={lastName}
+            onChange={setLastName}
+            autoComplete="family-name"
+            required
+          />
+        </div>
         <TextField
-          id="fullName"
-          label={t('auth.fullName')}
-          placeholder={t('auth.fullNamePlaceholder')}
-          value={fullName}
-          onChange={setFullName}
-          autoComplete="name"
+          id="username"
+          label={t('auth.username')}
+          placeholder={t('auth.usernamePlaceholder')}
+          hint={t('auth.usernameHint')}
+          value={username}
+          onChange={setUsername}
+          autoComplete="username"
           required
         />
         <TextField

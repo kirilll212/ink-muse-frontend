@@ -4,10 +4,33 @@
 
 export interface User {
   id: number
+  firstName: string
+  lastName: string
+  /** Convenience `firstName + lastName`, provided by the API. */
   fullName: string
+  username: string
   email: string
-  createdAt: string
-  updatedAt: string
+  phone: string | null
+  /** Relative avatar URL (e.g. /api/users/avatars/xxx.png), or null. */
+  avatarUrl: string | null
+  createdAt: string | null
+}
+
+/** Fields collected on the registration form. */
+export interface RegisterInput {
+  firstName: string
+  lastName: string
+  username: string
+  email: string
+  password: string
+}
+
+/** Editable profile fields. */
+export interface ProfileInput {
+  firstName: string
+  lastName: string
+  username: string
+  phone: string | null
 }
 
 export interface Tattoo {

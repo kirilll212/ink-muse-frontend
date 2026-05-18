@@ -2,6 +2,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../contexts/AuthContext'
 import { Logo } from './Logo'
+import { Avatar } from './Avatar'
 import { ThemeSwitcher } from './ThemeSwitcher'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { LogoutIcon } from './icons'
@@ -53,9 +54,16 @@ export function Navbar() {
 
           {isAuthenticated ? (
             <div className="flex items-center gap-2 border-l border-zinc-200 pl-2 dark:border-zinc-700">
-              <span className="hidden max-w-[10rem] truncate text-sm font-medium text-zinc-600 dark:text-zinc-300 sm:inline">
-                {user?.fullName}
-              </span>
+              <Link
+                to="/profile"
+                className="flex items-center gap-2 rounded-lg p-1 transition hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                aria-label={t('nav.profile')}
+              >
+                {user && <Avatar user={user} size={28} />}
+                <span className="hidden max-w-[8rem] truncate text-sm font-medium text-zinc-600 dark:text-zinc-300 sm:inline">
+                  {user?.fullName}
+                </span>
+              </Link>
               <button
                 type="button"
                 onClick={() => void logout()}

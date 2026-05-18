@@ -1,15 +1,11 @@
 import { apiClient } from './client'
-import type { AuthResponse, User } from '../types'
+import type { AuthResponse, RegisterInput, User } from '../types'
 
 /**
  * Auth API calls.
  */
 export const authApi = {
-  async register(input: {
-    fullName: string
-    email: string
-    password: string
-  }): Promise<AuthResponse> {
+  async register(input: RegisterInput): Promise<AuthResponse> {
     const { data } = await apiClient.post<AuthResponse>('/auth/register', input)
     return data
   },
