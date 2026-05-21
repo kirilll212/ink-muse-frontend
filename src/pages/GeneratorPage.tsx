@@ -16,9 +16,10 @@ import { StyleSelector } from '../components/StyleSelector'
 import { SizeSelector } from '../components/SizeSelector'
 import { ResultCard } from '../components/ResultCard'
 import { TattooEditModal } from '../components/TattooEditModal'
+import { StyleExamplesModal } from '../components/StyleExamplesModal'
 import { FormError } from '../components/AuthCard'
 import { Spinner } from '../components/Spinner'
-import { ImageIcon, SparklesIcon } from '../components/icons'
+import { ImageIcon, InfoIcon, SparklesIcon } from '../components/icons'
 
 /**
  * A numbered step card wrapping one part of the generator form.
@@ -68,6 +69,7 @@ export function GeneratorPage() {
   const [result, setResult] = useState<Tattoo | null>(null)
   const [editing, setEditing] = useState<Tattoo | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [styleExamplesOpen, setStyleExamplesOpen] = useState(false)
 
   const isCm = (value: number) =>
     Number.isFinite(value) && value >= SIZE_CM_MIN && value <= SIZE_CM_MAX
@@ -143,7 +145,21 @@ export function GeneratorPage() {
             <BodyPartSelector value={bodyPart} onChange={setBodyPart} />
           </Section>
 
-          <Section index={2} title={t('generator.styleStep')}>
+          <Section
+            index={2}
+            title={t('generator.styleStep')}
+            action={
+              <button
+                type="button"
+                onClick={() => setStyleExamplesOpen(true)}
+                aria-label={t('styleExamples.openAria')}
+                title={t('styleExamples.openAria')}
+                className="rounded-full p-1.5 text-zinc-400 transition hover:bg-zinc-100 hover:text-brand-600 dark:text-zinc-500 dark:hover:bg-zinc-800 dark:hover:text-brand-300"
+              >
+                <InfoIcon className="h-5 w-5" />
+              </button>
+            }
+          >
             <StyleSelector value={style} onChange={setStyle} />
           </Section>
 
@@ -246,6 +262,12 @@ export function GeneratorPage() {
           setResult(updated)
           setEditing(updated)
         }}
+      />
+
+      <StyleExamplesModal
+        open={styleExamplesOpen}
+        onClose={() => setStyleExamplesOpen(false)}
+        onPick={(picked) => setStyle(picked)}
       />
     </div>
   )

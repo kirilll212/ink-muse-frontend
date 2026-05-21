@@ -182,6 +182,32 @@
     "biomechanical": "Biomechanical",
     "trash-polka": "Trash polka"
   },
+  "styleExamples": {
+    "title": "Tattoo style guide",
+    "subtitle": "An iconic example per style — tap one to use it.",
+    "openAria": "See examples of each style",
+    "failed": "Couldn't load preview."
+  },
+  "styleDescriptions": {
+    "line-art": "Bold, continuous outlines with little or no shading.",
+    "minimalist": "Sparse, essential shapes — only what's necessary.",
+    "geometric": "Precise shapes, symmetry and repeating patterns.",
+    "traditional": "Bold lines, limited colours, classic Americana.",
+    "neo-traditional": "Traditional with richer detail and a wider palette.",
+    "realistic": "Photo-like shading, proportion and depth.",
+    "blackwork": "Dense solid-black fills with high contrast.",
+    "dotwork": "Shading built from many tiny dots — stippling.",
+    "tribal": "Bold black silhouettes inspired by ancient motifs.",
+    "watercolor": "Loose washes of colour with soft, painted edges.",
+    "japanese": "Irezumi: waves, koi, dragons and bold linework.",
+    "new-school": "Cartoonish, exaggerated forms and bright colours.",
+    "sketch": "Hand-drawn pencil look with visible strokes.",
+    "ornamental": "Lace-like patterns, mandalas and filigree.",
+    "surrealism": "Dreamlike, melting or impossible forms.",
+    "engraving": "Etching-style hatching, like an old print.",
+    "biomechanical": "Mechanical parts woven into flesh and bone.",
+    "trash-polka": "Red-and-black collage of brushstrokes and text."
+  },
   "size": {
     "widthLabel": "Width",
     "heightLabel": "Height",
